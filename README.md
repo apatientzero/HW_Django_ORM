@@ -1,1 +1,2 @@
-# HW_Django_ORM
+# Работа с ORM
+- http://127.0.0.1:8000/admin/ -> user/12345678 
