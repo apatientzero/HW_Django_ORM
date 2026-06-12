@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ phone.name }}</title>
+    <style>
+        .product-container { max-width: 600px; margin: 20px auto; }
+        .product-container img { max-width: 100%; height: auto; }
+        .back-link { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <a href="{% url 'catalog' %}" class="back-link">&larr; Вернуться в каталог</a>
+        
+        <h1>{{ phone.name }}</h1>
+        
+        {% if phone.image %}
+            <img src="{{ phone.image }}" alt="{{ phone.name }}">
+        {% endif %}
+        
+        <p><strong>Цена:</strong> {{ phone.price }} руб.</p>
+        <p><strong>Дата выпуска:</strong> {{ phone.release_date }}</p>
+        <p><strong>ID:</strong> {{ phone.id }}</p>
+    </div>
+</body>
+</html>
